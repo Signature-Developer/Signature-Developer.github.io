@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiaaf - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <img src="c_logo.jpg" class="logo" />
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="first" id="home">
+        <div class="leftsection">
+          <div>Hi, I am <i>Tariq</i> and</div>
+          <div>I am a passionate</div>
+          <span id="element"></span>
+          <div class="contact">
+            <button>Contact<span></span></button>
+          </div>
+        </div>
+        <div class="rightsection">
+            <img src="main.png">
+        </div>
+      </section>
+      <section class="secondsection" id="about">
+        <div class="left">
+          <img src="aboutimg.jpg" id="about_img">
+        </div>
+        <div class="right">
+          <h1>About</h1>
+          <span>Hi, I am <i>Tariq</i>,<br> 
+            a passionate computer engineer, 
+            <br>
+            I have 2 years of experience in <i>python</i>,
+            <br>
+            I can develop Software, Android Applications, Web and Game...
+          </span>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="open_tab('skills')">Skills</p>
+            <p class="tab-links" onclick="open_tab('education')">Education</p>
+            <p class="tab-links" onclick="open_tab('experience')">Experience</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Software Development</span><br>Building Full Stack GUI</li>
+              <li><span>Web Development</span><br>Building Exclusive Websites with attractive features</li>
+              <li><span>Game Development</span><br>Building 2d Games with beautifull animation</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>BAF Shaheen English Medium School</span><br><i class="material-icons">directions</i> Tejgaon, Dhaka</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><i class='bx bxl-python'></i><progress max="100" value="80"></progress><i>80%</i></li>
+              <li><i class='bx bxl-javascript'></i><progress max="100" value="20"></progress><i>20%</i></li>
+              <li><i class='bx bxl-html5'></i><progress max="100" value="60"></progress><i>60%</i></li>
+              <li><i class='bx bxl-css3'></i><progress max="100" value="50"></progress><i>50%</i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="thirdsection" id="services">
+        <div class="wrappers">
+          <h1>My Services</h1>
+          <ul>
+            <li><span>Web Development</span><p>I am still learning in the web development,
+              <br> 
+              but I do have some experience, 
+              <br>
+              visit projects section for more..
+            </p></li>
+            <li><span>Software Development</span><p>I have 2 years of experience developing Software
+              <br>include GUI and various other application</p></li>
+              <li><span>Game Development</span><p>Besides Software Development,
+                <br> I also started learning games development</p></li>
+          </ul>
+          <ul>
+            <li><span>Video Editing</span><p>I started learning video editing 
+              <br>while learning Game Development, Now,
+              <br> I have Become a frequent user of 
+              <br>Premiere Pro and After Effects</p></li>
+          </ul>
+        </div>
+      </section>
+      <section class="last" id="contact">
+        <div class="contact">
+          <h1>Contact</h1>
+          <ul>
+            <li>Email : <p>tiaaf2011@gmail.com</p></li>
+            <li>Contact No. : <p>880+ 01717559007</p></li>
+          </ul>
+          <ul>
+            <li><i class='bx bxl-whatsapp'></i><br>Whatsapp</li>
+            <li><i class='bx bxl-gmail'></i><br>Gmail</li>
+            <li><i class='bx bxl-discord-alt'></i><br>Discord</li>
+          </ul>
+        </div>
+      </section>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "<i>Software developer...</i>",
+          "<i>Web developer...</i>",
+          "<i>Digital Marketer...</i>",
+          "<i>Video Editor...</i>",
+          "<i>Game Developer...</i>"
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links")
+      var tabcontents = document.getElementsByClassName("tab-contents")
+
+      function open_tab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link")
+        }for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+      }
+    </script>
+  </body>
+</html>

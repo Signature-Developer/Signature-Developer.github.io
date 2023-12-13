@@ -1,0 +1,277 @@
+@keyframes fade {
+    from {
+      transform: translateY(-5%);
+      opacity: 0%;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+  }
+@keyframes faderight {
+from {
+    transform: translatex(15%);
+    opacity: 0%;
+}
+to {
+    transform: translatex(0%);
+    opacity: 100%;
+}
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: black;
+  color: white;
+}
+
+.container .navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 0px;
+}
+
+.container .navbar .logo {
+  height: 50px;
+  border-radius: 40px;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0 23px;
+}
+.navbar ul li {
+  list-style: none;
+  margin: 12px 20px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: goldenrod;
+  text-shadow: 0 0 10px goldenrod;
+}
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: goldenrod;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+.first {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  margin: 0 23px;
+}
+.rightsection {
+  display: flex;
+  width: 40%;
+  height: 35rem;
+  justify-content: center;
+}
+.rightsection {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+.leftsection {
+  width: 40%;
+  height: 30rem;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 30px 10px;
+}
+.leftsection i {
+  color: goldenrod;
+  text-shadow: 0 0 15px goldenrod;
+}
+.leftsection .contact button {
+  border-radius: 40px;
+  border: 2px solid goldenrod;
+  text-shadow: 0 0 15px goldenrod;
+  box-shadow: 0 0 25px goldenrod;
+  background: transparent;
+  color: white;
+  width: 30%;
+  height: 50px;
+  transition: 0.5s;
+  font-weight: bold;
+  position: relative;
+}
+.leftsection .contact span {
+  background: goldenrod;
+  z-index: -1;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  border-radius: 40px;
+  left: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+.leftsection .contact button:hover span {
+  width: 100%;
+}
+.leftsection .contact button:hover {
+  border: none;
+}
+.secondsection {
+    padding: 20px 45px 20px 20px;
+    height: 38rem;
+    display: flex;
+
+}
+.secondsection .left {
+    flex-basis: 35%;
+    margin: 0 0 0 60px;
+}
+#about_img {
+    height: 30rem;
+    border-radius: 40px;
+    margin: 30px 40px;
+    animation-name: faderight;
+    animation-duration: 0.5s;
+    box-shadow: 0 0 50px goldenrod;
+}
+.secondsection .right {
+    flex-basis: 45%;
+    padding: 30px 0;
+    font-size: 18px;
+}
+.right h1 {
+    margin-bottom: 20px;
+    color: none;
+    font-size: 42px;
+}
+.right i {
+    color: goldenrod;
+    text-shadow: 0 0 15px goldenrod;
+    font-size: 20px;
+}
+.right .tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: goldenrod;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+
+}
+.tab-contents span {
+    color: gold;
+    text-shadow: 0 0 20px goldenrod;
+    font-size: 22px;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
+#experience ul li i{
+  font-size: 40px;
+  margin: 5px 40px;
+}
+
+.thirdsection {
+    height: 30rem;
+    padding: 30px 40px;
+    margin: 0 20px 30px;
+}
+.thirdsection .wrappers {
+    padding: 20px 45px 20px 20px;
+}
+.wrappers h1 {
+    margin: 30px 0;
+    font-size: 42px;
+}
+.wrappers ul {
+    display: flex;
+    margin: 30px 40px 20px 20px;
+}
+.wrappers ul li {
+    list-style: none;
+    margin: 0px 20px 0 20px;
+    padding: 20px 45px 20px 20px;
+    background: rgb(38, 36, 36);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.wrappers span {
+    font-size: 30px;
+}
+.wrappers ul li:hover {
+    transform: translateY(-10%);
+    background-color: goldenrod;
+    box-shadow: 0 0 50px goldenrod;
+}
+
+.last {
+    margin: 30px 40px 20px 20px;
+    padding: 20px 0 20px 57px;
+    height: 20rem;
+}
+.last .contact {
+    padding: 20px 45px 20px 20px;
+    background: transparent;
+}
+.contact h1 {
+    font-size: 42px;
+}
+.contact ul {
+    margin: 20px 0 40px;
+    display: flex;
+    text-shadow: 0 0 50px goldenrod;
+}
+.contact ul li {
+    list-style: none;
+    font-size: 22px;
+    padding: 0 0 20px 20px;
+    color: goldenrod;
+}
+.contact ul li p{
+    padding: 0 20px 0 0 ;
+    color: white;
+    text-shadow: 0 0 20px goldenrod;
+}
+.contact ul li i {
+    color: white;
+    transition: 0.5s;
+    font-size: 50px;
+}
+.contact ul li i:hover {
+    transform: translateY(-30%);
+    color: goldenrod;
+    text-shadow: 0 0 20px goldenrod;
+}
